@@ -45,8 +45,16 @@ kotlin {
         }
         /* ... */
     }
-    js().compilations["test"].defaultSourceSet {/* ... */ }
-
+    js().compilations["test"].defaultSourceSet {
+        dependencies {
+            implementation(kotlin("test-js"))
+            implementation(kotlin("test-js-runner"))
+        }
+    }
+    js{
+        browser()
+        nodejs()
+    }
     sourceSets {
         val commonMain by getting {
             dependencies {

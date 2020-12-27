@@ -35,3 +35,5 @@ open class ConfigurationConfiguration<D> : Configuration<Configuration<D>> {
 
     override fun configure(): Configuration<D> = conf!!
 }
+
+
