@@ -53,7 +53,6 @@ kotlin {
     }
     js{
         browser()
-        nodejs()
     }
     sourceSets {
         val commonMain by getting {
